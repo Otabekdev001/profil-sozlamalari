@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- stylesh -->
-        <link rel="stylesheet" href="style.css">
-       <link rel="stylesheet" href="css/normalize.css">
-      <!-- stylesh -->
-    <title>Project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/stylesh.css">
+    <title>profil sozlamalari</title>
 </head>
 <body>
-    
+       <div class="main-content">
+        <div class="container">
+            <div class="profile-settings">
+                <form class="profile-settings-form" action="htpps://echo.htlmacademy.ru" method="post">
+                  <header class="profile-settings-header">
+                     <h1 class="profile-settings-title">Account-settings</h1>
+                       <a href="#" class="profile-settings-close-link">
+                         <img src="img/icon-close.svg" alt="close" class="close" width="24" height="24">
+                       </a>
+                    </header> 
+                      <div class="profile-settings-form-body">
+                        <img class="profile-settings-avatar" src="img/avatar.jpg" alt="avatar" width="60" height="60">
+                        <div class="profile-settings-form-group">
+                            <label for="profile-username-input" class="profile-settings-form-label">User Name</label>
+                            <input class="profile-settings-form-field" type="text" name="username" id="profile-username-input" placeholder="enter your username" required>
+                        </div>
+                        <!-- 2 -->
+                          <div class="profile-settings-form-row">
+                            <div class="profile-settings-form-group">
+                                <label for="profile-first-name-input" class="profile-settings-form-label">Firs Name</label>
+                                <input class="profile-settings-form-field" type="text" name="firs-ame" id="profile-first-name-input" placeholder="enter your first-name" required>
+                            </div>
+                            <!-- 3 -->
+                            <div class="profile-settings-form-group">
+                                <label for="profile-lastname-input" class="profile-settings-form-label">Last Name</label>
+                                <input class="profile-settings-form-field" type="text" name="lastname" id="profile-lastname-input" placeholder="enter your lastname" required>
+                            </div>
+                          </div>
+                        <!-- 4 -->
+                        <div class="profile-settings-form-group">
+                            <label for="profile-settings-form-input profile-emailname-input" class="profile-settings-form-label">Email</label>
+                            <input class="profile-settings-form-field" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="emailname" id="profile-emailname-input" placeholder="enter your emailname" required>
+                        </div>
+                        <!-- 5 -->
+                        <div class="profile-settings-form-group">
+                            <label for="profile-bio-textarea" class="profile-settings-form-label">Bio</label>
+                            <textarea class="profile-settings-form-field profile-settings-form-field-textarea"  name="bio" id="settings-bio-textarea" placeholder="tell as about yourself"  required></textarea>
+                        </div>
+                    </div>
+                     <footer class="profile-settings-form-actions">
+                        <button class="profile-settings-form-action" type="button">Cancel</button>
+                        <button class="profile-settings-form-action" type="submit">Save</button>
+                     </footer>
+                </form>
+            </div>
+        </div>
+       </div>
 </body>
 </html>

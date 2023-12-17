@@ -9,7 +9,7 @@ html{
 *,
 *::before,
 *::after{
-    box-sizing:border-box;
+    box-sizing:inherit;
 }
 
 
@@ -17,16 +17,25 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    font-family: "Arial",sans-serif;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     padding: 0;
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
+    background-color:#222;
     color:#222;
+    overflow-x:hidden;
 }
-
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border:0;
+    padding: 0;
+    clip:rect(0 0 0 0);
+    overflow: hidden;
+}
 img{
     max-width: 100%;
     height: auto;
@@ -35,9 +44,9 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 640px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -48,4 +57,108 @@ img{
 /* MAIN CONTENT */
 .main-content{
     flex-grow: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.profile-settings {
+    max-width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(240, 240, 16);
+    box-shadow:0 10px 15px -3px rgba(0,0,0,0.2)
+}
+.profile-settings-form {
+}
+.profile-settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+
+}
+.profile-settings-title {
+    margin: 0;
+    font-size: 20px;
+}
+.profile-settings-close-link {
+    display: flex;
+}
+.close {
+}
+.profile-settings-form-body {
+    position: relative;
+    background-color:#fff;
+    padding:60px 30px 40px;
+    left: 40px;
+    box-shadow:0 10px 15px -3px rgba(0,0,0,0.2)
+}
+.profile-settings-form-input:not(:placeholder-shown){
+    border-color:red;
+}
+.profile-settings-form-input:valid{
+    border-color:rgb(2, 73, 2);
+}
+.profile-settings-form-row{
+    display: flex;
+}
+.profile-settings-form-row:not(:last-child){
+    margin-bottom: 24px;
+}
+.profile-settings-avatar{
+    position: absolute;
+    left: 30;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    object-fit: cover;
+    transform:translateY(-50%);
+}
+.profile-settings-form-group {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.profile-settings-form-group:not(:last-child){
+    margin-bottom: 24px;
+}
+.profile-settings-form-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:14px;
+    color:#666;
+    margin-bottom: 8px;
+}
+.profile-settings-form-field {
+    width: 100%;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border:0;
+    border-bottom:1px solid #666;
+
+}
+.profile-settings-form-row .profile-settings-form-group{
+    margin-bottom: 0;
+    width: 50%; 
+}
+.profile-settings-form-field-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.profile-settings-form-actions{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 40px;
+}
+.profile-settings-form-action{
+    padding: 0;
+    border:0;
+    background-color:transparent;
+}
+.profile-settings-form-action:not(:last-child){
+    margin-right: 40px;
 }
